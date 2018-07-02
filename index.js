@@ -2,7 +2,7 @@ const express = require('express');
 
 var app = express();
 
-app.get('/req',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send({ping:'server is ready'});
 })
 
