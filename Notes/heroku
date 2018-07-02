@@ -1,0 +1,9 @@
+
+https://feedback-system-server.herokuapp.com/ | https://git.heroku.com/feedback-system-server.git
+
+first initialize a local git and commit changes with git init git add . git commit
+Then
+Heroku login
+Heroku create
+git remote add heroku https://git.heroku.com/feedback-system-server.git
+git push heroku master
