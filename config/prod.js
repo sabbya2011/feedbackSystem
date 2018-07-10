@@ -5,5 +5,7 @@ module.exports = {
     cookieSessionMaxAge:30*24*60*60,
     cookieSessionKey:process.env.COOKIE_KEY,
     stripePublishableKey:process.env.STRIPE_PUBLISHABLE_KEY,
-    stripeSecretkey:process.env.STRIPE_SECRET_KEY
+    stripeSecretkey:process.env.STRIPE_SECRET_KEY,
+    sendGridKey:process.env.SEND_GRID_KEY,
+    redirectDomain:process.env.REDIRECT_DOMAIN
 };
