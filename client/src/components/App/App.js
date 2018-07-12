@@ -5,9 +5,9 @@ import {fetchUser} from '../../store/actions';
 
 import Header from '../Header/Header';
 import Landing from '../Landing/Landing';
+import Dashboard from '../Dashboard/Dashboard';
+import Surveynew from '../Surveys/SurveyNew';
 
-const Dashboard = ()=>{return <h1>Dashboard</h1>};
-const Surveynew = ()=>{return <h1>Survey New</h1>};
 
 class App extends Component{
     componentDidMount(){
