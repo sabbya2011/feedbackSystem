@@ -23,13 +23,13 @@ passport.use(new GoogleStrategy({
     const existingUser = await User.findOne({googleId:userId});
     if(existingUser){
         done(null,existingUser);
+    }else{
+        const newUser = new User({
+            googleId:profile.id
+        });
+        const usr = await newUser.save();
+        done(null,usr);
     }
-    const newUser = new User({
-        googleId:profile.id
-    });
-    const usr = await newUser.save();
-    done(null,usr);
-
 }));
 
 module.exports = {passport}
