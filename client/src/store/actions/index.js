@@ -13,7 +13,13 @@ export const handleToken = token => async dispatch =>{
 }
 
 export const submitSurvey = (value,history) => async dispatch =>{
-    let res = await axios.post('/api/surveys',value);
-    history.push('/surveys');
-    dispatch({type:FETCH_USER,payload:res.data});
+    try{
+        const res = await axios.post('/api/surveys',value);
+        history.push('/surveys');
+        dispatch({type:FETCH_USER,payload:res.data});
+    }catch(err){
+        history.push('/surveys');
+        alert("You need to have some credits");
+    }
+    
 }
